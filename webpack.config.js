@@ -3,7 +3,8 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const webpack = require("webpack");
 const autoprefixer = require("autoprefixer");
-const pages = ["index", /*"collection", "nominees", "winners","submit","profile","sites"*/];
+const CopyPlugin = require('copy-webpack-plugin');
+const pages = ["index", /*"collection", "nominees",*/ "winners",/*"submit","profile","sites"*/];
 
 const devMode = process.env.NODE_ENV !== 'production';
 module.exports = {
@@ -51,7 +52,6 @@ module.exports = {
         test: /\.pug$/,
         use: ['html-loader', 'pug-html-loader']
       },
-      
       {
         test: /\.svg$/i,
         use: [
@@ -149,5 +149,12 @@ module.exports = {
       hashDigest: 'hex',
       hashDigestLength: 20
     }),
+    new CopyPlugin([
+      {
+        from: 'src/assets/js/plugins',
+        to: './assets/js/plugins/[name].[ext]',
+        toType: 'template',
+      },
+    ]),
   ],
 };
