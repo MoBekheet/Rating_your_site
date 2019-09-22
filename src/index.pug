@@ -1,8 +1,176 @@
-<!DOCTYPE html>
+include assets/includes/_variables
+include assets/includes/_mixins
+include assets/includes/mixins/_card
+doctype html
 html(lang="en")
+  //- HEAD
   head
-    meta(charset="UTF-8")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    meta(http-equiv="X-UA-Compatible", content="ie=edge")
-    title Document
+    include assets/includes/_head
+    //- link(rel="stylesheet", href="assets/css/home.css")
   body
+    .loading.d-none.align-items-center.justify-content-center
+      .sk-folding-cube
+        div(class="sk-cube1 sk-cube")
+        div(class="sk-cube2 sk-cube")
+        div(class="sk-cube4 sk-cube")
+        div(class="sk-cube3 sk-cube")
+    a(href="submit.html" id="btnSubmitYourSite_absolute" class="fi flaticon-add p-3 link" data-hover="!أعرض موقعك الأن")
+    include assets/includes/mixins/_navbar&aside
+    include assets/includes/mixins/_login
+    include assets/includes/mixins/_cursor
+    
+    main
+      div(data-scroll)
+        section#site_of_the_day.py-md-5
+          #split.d-none.d-md-block
+          a(href="#!" class="overlay link" data-hover="عرض")
+          .dots
+          #small_screen.d-md-none
+            img(class="item__img" src="assets/images/1.jpg", alt="")
+          #items.m-0.d-md-flex.d-none.align-items-center.justify-content-start
+            .item.item_scroll.link: .mask_img.item__img-wrap: img(class="item__img" src="assets/images/1.jpg", alt=null)
+            .item.item_scroll.link: .mask_img.item__img-wrap: img(class="item__img" src="assets/images/2.jpg", alt=null)
+            .item.item_scroll.link: .mask_img.item__img-wrap: img(class="item__img" src="assets/images/3.jpg", alt=null)
+            .item.item_scroll.link: .mask_img.item__img-wrap: img(class="item__img" src="assets/images/4.jpg", alt=null)
+          #caption.d-flex.align-items-center.flex-column
+            #info.mb-4
+              #heading-large
+                h1: a(href="#" class="link") موقع اخباري
+                h5#date.d-md-none.my-2 3 فبراير 2018
+              #data: span بواسطة 
+                a(href="#" class="link name") محمود بخيت 
+                span من 
+                  a(href="#" class="link"): strong مصر 
+                  span تقييم 
+                    span.rating 7
+
+            .box_noteSite.d-none.d-md-block
+              ul.d-flex.flex-wrap.justify-content-around.justify-content-center
+                li(class="dislink design", data-hover="التصميم")
+                li(class="dislink usability", data-hover="سهولة الاستخدام")
+                li(class="dislink creativity", data-hover="الإبداع")
+                li(class="dislink content", data-hover="المحتوى")
+                li(class="dislink responsive", data-hover="متجاوب")
+            #btnSubmitYourSite.mt-4.mt-mt-3
+              a(href="submit.html" class="px-md-4 px-3 py-md-3 py-2 link") !أعرض موقعك الأن
+          
+          #box_bread.d-none.d-lg-block
+            .container
+              .row
+                .col-md-6
+                  #box_left
+                    h4 موقع اليوم 
+                      span 3 فبراير 2018
+                .col-md-6
+                  #box_right
+                    .followers
+                      ul.p-0.m-0.d-flex.justify-content-end
+                        li.more_users.mx-1: a(href="#" class="link d-flex align-items-center justify-content-center")
+                          i.flaticon-user.fi
+                          span.num 23
+                        - for (let x = 0; x < 5; x++)
+                            li.mx-1.user_overflow: a(href="#" class="link d-block"): img(src="assets/images/users/2.jpg", alt="")
+            
+          #info_down.d-flex.justify-content-center
+            button(type="button" id="close" class="link" data-hover="خروج"): i.fi.flaticon-cancel
+        
+        section#Winners.my-5.py-5
+          .dots
+          .container
+            .head_title.mb-5.mt-0
+              h2 مواقع اليوم 
+                span الفائزين السابقين
+          div(class="swiper__slider swiper")
+            div(class="swiper__inner")
+            div(class="proxy link move")
+              div(class="swiper__content d-flex")
+                div(class="swiper-slide slide")
+                  +swiper("assets/images/4.jpg",null,"assets/images/users/1.jpg",null,"محمود بخيت","30","مصر","3 فبراير 2018")
+                div(class="swiper-slide slide")
+                  +swiper("assets/images/1.jpg",null,"assets/images/users/2.jpg",null,"محمود بخيت","30","مصر","3 فبراير 2018")
+                div(class="swiper-slide slide")
+                  +swiper("assets/images/5.jpg",null,"assets/images/users/3.jpg",null,"محمود بخيت","30","مصر","3 فبراير 2018")
+                div(class="swiper-slide slide")
+                  +swiper("assets/images/6.jpg",null,"assets/images/users/4.jpg",null,"محمود بخيت","30","مصر","3 فبراير 2018")
+                div(class="swiper-slide slide")
+                  +swiper("assets/images/9.jpg",null,"assets/images/users/5.jpg",null,"محمود بخيت","30","مصر","3 فبراير 2018")
+                div(class="swiper-slide slide")
+                  +swiper("assets/images/7.jpg",null,"assets/images/users/4.jpg",null,"محمود بخيت","30","مصر","3 فبراير 2018")
+                div(class="swiper-slide slide")
+                  +swiper("assets/images/8.jpg",null,"assets/images/users/3.jpg",null,"محمود بخيت","30","مصر","3 فبراير 2018")
+                div(class="swiper-slide slide")
+                  +swiper("assets/images/12.jpg",null,"assets/images/users/2.jpg",null,"محمود بخيت","30","مصر","3 فبراير 2018")
+            
+        section#nominees.my-5.py-5
+          .dots
+          .container
+            .head_title.mb-5.mt-0
+              h2 !المرشحين 
+                span نحن بحاجة لصوتك
+          div(class="swiper__slider swiper")
+            div(class="swiper__inner")
+            div(class="proxy link move")
+              div(class="swiper__content d-flex")
+                div(class="swiper-slide slide")
+                  +swiperNominees("assets/images/2.jpg",null,"assets/images/users/2.jpg",null,"محمود بخيت","30","مصر","3 فبراير 2018")
+                div(class="swiper-slide slide")
+                  +swiperNominees("assets/images/1.jpg",null,"assets/images/users/1.jpg",null,"محمود بخيت","30","مصر","3 فبراير 2018")
+                div(class="swiper-slide slide")
+                  +swiperNominees("assets/images/3.jpg",null,"assets/images/users/3.jpg",null,"محمود بخيت","30","مصر","3 فبراير 2018")
+                div(class="swiper-slide slide")
+                  +swiperNominees("assets/images/13.jpg",null,"assets/images/users/5.jpg",null,"محمود بخيت","30","مصر","3 فبراير 2018")
+                div(class="swiper-slide slide")
+                  +swiperNominees("assets/images/9.jpg",null,"assets/images/users/4.jpg",null,"محمود بخيت","30","مصر","3 فبراير 2018")
+                div(class="swiper-slide slide")
+                  +swiperNominees("assets/images/10.jpg",null,"assets/images/users/1.jpg",null,"محمود بخيت","30","مصر","3 فبراير 2018")
+                div(class="swiper-slide slide")
+                  +swiperNominees("assets/images/11.jpg",null,"assets/images/users/3.jpg",null,"محمود بخيت","30","مصر","3 فبراير 2018")
+                div(class="swiper-slide slide")
+                  +swiperNominees("assets/images/5.jpg",null,"assets/images/users/2.jpg",null,"محمود بخيت","30","مصر","3 فبراير 2018")
+            
+        section#featured_Members.my-5.py-5
+          .dots
+          .container
+            .head_title.mb-5.mt-0
+              h2 الأعضاء 
+                span المميزون
+          div(class="swiper__slider swiper")
+            div(class="swiper__inner")
+            div(class="proxy link move")
+              div(class="swiper__content d-flex")
+                div(class="swiper-slide slide")
+                  +swiper("assets/images/11.jpg",null,"assets/images/users/1.jpg",null,"محمود بخيت","30","مصر","3 فبراير 2018")
+                div(class="swiper-slide slide")
+                  +swiper("assets/images/2.jpg",null,"assets/images/users/2.jpg",null,"محمود بخيت","30","مصر","3 فبراير 2018")
+                div(class="swiper-slide slide")
+                  +swiper("assets/images/13.jpg",null,"assets/images/users/3.jpg",null,"محمود بخيت","30","مصر","3 فبراير 2018")
+                div(class="swiper-slide slide")
+                  +swiper("assets/images/3.jpg",null,"assets/images/users/4.jpg",null,"محمود بخيت","30","مصر","3 فبراير 2018")
+                div(class="swiper-slide slide")
+                  +swiper("assets/images/5.jpg",null,"assets/images/users/5.jpg",null,"محمود بخيت","30","مصر","3 فبراير 2018")
+                div(class="swiper-slide slide")
+                  +swiper("assets/images/6.jpg",null,"assets/images/users/4.jpg",null,"محمود بخيت","30","مصر","3 فبراير 2018")
+                div(class="swiper-slide slide")
+                  +swiper("assets/images/9.jpg",null,"assets/images/users/3.jpg",null,"محمود بخيت","30","مصر","3 فبراير 2018")
+                div(class="swiper-slide slide")
+                  +swiper("assets/images/5.jpg",null,"assets/images/users/2.jpg",null,"محمود بخيت","30","مصر","3 فبراير 2018")
+            
+        section#gird.my-5.py-5
+          .container
+            div(class="card-columns") 
+              +card("assets/images/12.jpg",null,"assets/images/users/2.jpg",null,"محمود بخيت","30","مصر","3 فبراير 2018")
+              +card("assets/images/13.jpg",null,"assets/images/users/3.jpg",null,"محمود بخيت","30","مصر","3 فبراير 2018")
+              +card("assets/images/2.jpg",null,"assets/images/users/5.jpg",null,"محمود بخيت","30","مصر","3 فبراير 2018")
+              +card("assets/images/3.jpg",null,"assets/images/users/4.jpg",null,"محمود بخيت","30","مصر","3 فبراير 2018")
+              +card("assets/images/4.jpg",null,"assets/images/users/3.jpg",null,"محمود بخيت","30","مصر","3 فبراير 2018")
+              +card("assets/images/7.jpg",null,"assets/images/users/2.jpg",null,"محمود بخيت","30","مصر","3 فبراير 2018")
+              +card("assets/images/9.jpg",null,"assets/images/users/3.jpg",null,"محمود بخيت","30","مصر","3 فبراير 2018")
+              +card("assets/images/11.jpg",null,"assets/images/users/5.jpg",null,"محمود بخيت","30","مصر","3 فبراير 2018")
+              +card("assets/images/10.jpg",null,"assets/images/users/2.jpg",null,"محمود بخيت","30","مصر","3 فبراير 2018")
+              +card("assets/images/8.jpg",null,"assets/images/users/1.jpg",null,"محمود بخيت","30","مصر","3 فبراير 2018")
+              
+        include assets/includes/mixins/_footer
+    
+    //- SCRIPTS
+    script(src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/ThrowPropsPlugin.min.js")
+    include assets/includes/_scripts

@@ -9,7 +9,11 @@ const devMode = process.env.NODE_ENV !== 'production';
 module.exports = {
   entry: [
     './src/index.js',
-    './src/assets/scss/main.scss'
+    './src/assets/scss/main.scss',
+    './src/assets/scss/pages/collection.scss',
+    './src/assets/scss/pages/nominees.scss',
+    './src/assets/scss/pages/winners.sass',
+    './src/assets/scss/pages/home.scss',
   ],
   devtool: 'source-map',
   output: {
@@ -49,17 +53,43 @@ module.exports = {
       },
       
       {
-        test: /\.(png|jpe?g|gif|svg)$/i,
+        test: /\.svg$/i,
         use: [
           {
             loader: 'file-loader',
             options: {
               emitFile: true,
-              name: 'assets/images/[sha512:hash:base64:7].[ext]'
+              name: 'images/[sha512:hash:base64:7].[ext]',
+              publicPath: '../',
+              outputPath: 'assets/',
             },
-            
           },
         ],
+      },
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              emitFile: true,
+              name: 'assets/images/[sha512:hash:base64:7].[ext]',
+            },
+          },
+        ],
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: 'fonts/[sha512:hash:base64:7].[ext]',
+              publicPath: '../',
+              outputPath: 'assets/',
+            }
+          }
+        ]
       },
       {
         test: /\.(sa|sc|c)ss$/,
@@ -84,17 +114,6 @@ module.exports = {
         ]
       },
       
-      {
-        test: /\.(woff|woff2|eot|ttf|otf)$/,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              name: 'assets/fonts/[sha512:hash:base64:7].[ext]'
-            }
-          }
-        ]
-      }
     ],
   },
   

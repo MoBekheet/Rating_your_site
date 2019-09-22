@@ -1,8 +1,8 @@
 @import "includes/_main_variables";
 // include => Bootstrap grid
-@import 'node_modules/bootstrap/scss/bootstrap-grid';
+@import '../../../node_modules/bootstrap/scss/bootstrap-grid';
 @import url('https://fonts.googleapis.com/css?family=Cairo:600,700');
-@import './font/flaticon';
+@import 'includes/flaticon';
 html,
 body {
   margin: 0;
