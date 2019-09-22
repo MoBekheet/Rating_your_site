@@ -1,0 +1,76 @@
+#login.none
+  #box.d-flex.justify-content-center.align-items-center
+    #modal.my-md-4.my-0
+      a(href="#!" class="closeBtn link")
+        i(class="flaticon-cancel fi")
+        
+      div(class="form mx-auto my-4 signUp", style="display: none;")
+        div(class="d-flex align-content-center justify-content-between mb-4 head flex-wrap")
+          span هل أنت عضو؟ 
+            a(href="#" class="selected link" data-class="login") تسجيل الدخول الآن
+          //- h3.m-md-0.my-2 سجل مع
+        
+        div(class="social")
+          a(href="#!" class="link d-flex justify-content-center align-items-center" id="login-Fb")
+            i(class="flaticon-facebook fi ml-1")
+            span متابعة بحساب فيسبوك
+        div(class="status")
+        h4 أو مع البريد الإلكتروني الخاص بك
+        form
+          input(type="text" name="text" placeholder="اسم المستخدم")
+          input(type="email" name="text" placeholder="البريد الإلكتروني")
+          input(type="password" name="password" placeholder="كلمه السر")
+          input(type="password" name="password" placeholder="اعد كلمة السر")
+          .box
+            label.link
+              input(type="checkbox" name="i_accept")
+              span(class="check") 
+              .
+                أقبل 
+            strong
+              a(href="#!" target="_blank" class="link") الأحكام والشروط 
+            strong
+              a(href="#!" target="_blank" class="link") وسياسة خاصة
+          button(class="create-your-account link" type="submit") أنشئ حسابك
+      
+      div(class="form mx-auto my-4 login")
+        div(class="d-flex align-content-center justify-content-between mb-4 head flex-wrap")
+          span لست عضوا حتى الآن؟ 
+            a(href="#" class="selected link" data-class="signUp") سجل الان
+          h3.m-md-0.my-2 تسجيل الدخول للمتابعة
+        form
+          input(class="link" type="text" name="text" placeholder="البريد الإلكتروني أو اسم المستخدم")
+          input(class="link" type="password" name="password" placeholder="كلمه السر")
+          .box
+            label.link
+              input(type="checkbox" name="remember_me")
+              span(class="check") 
+              .
+                تذكرني
+        
+          button(class="loginNow link" type="submit") تسجيل الدخول الآن!
+        
+        div(class="forget mt-3 mb-4")
+          a(href="#" class="link selected" data-class="password") نسيت رقمك السري؟
+        
+        h4 أو تسجيل الدخول مع
+
+        div(class="social")
+          a(href="#!" class="link d-flex justify-content-center align-items-center" id="login-Fb")
+            i(class="flaticon-facebook fi ml-1")
+            span متابعة بحساب فيسبوك
+        div(class="status")
+      
+      div(class="form mx-auto my-4 password", style="display: none;")
+        div(class="d-flex align-content-center justify-content-between mb-4 head")
+          h3.m-0 نسيت رقمك السري
+          span لست عضوا حتى الآن؟ 
+            a(href="#" class="selected link" data-class="signUp") سجل
+        
+        p أدخل اسم المستخدم أو عنوان البريد الإلكتروني الخاص بك وسنرسل لك رابطًا لإعادة تعيين كلمة المرور الخاصة بك.
+        form 
+          input(type="text" name="text" placeholder="البريد الإلكتروني أو اسم المستخدم")
+          button(class="forgot-password link" type="submit") نسيت كلمة السر
+        
+        div(class="back selected" data-class="login")
+          a(href="#") عودة

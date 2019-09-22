@@ -1,0 +1,13 @@
+$main-bg: #fff;
+$main-font-family: 'Cairo', sans-serif;
+$main-font-size: 14px;
+$main-color: #2a2a2a;
+$main-color-hover: #00a8be;
+
+$tcon-size: 30px !default;
+$tcon-transition: .3s !default;
+$tcon-jstransform: 'tcon-transform' !default;
+
+$tcon-menu-radius: ($tcon-size / 14) !default;
+$tcon-menu-arrowleft-transformation: (transform: scale3d(.8, .8, .8) rotate3d(0, 0, 1, 90deg)) !default;
+$tcon-menu-arrow360left-transformation: (transform: scale3d(.8, .8, .8) rotate3d(0, 0, 1, 360deg)) !default;
