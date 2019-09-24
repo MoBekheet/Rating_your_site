@@ -4,17 +4,20 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const webpack = require("webpack");
 const autoprefixer = require("autoprefixer");
 const CopyPlugin = require('copy-webpack-plugin');
-const pages = ["index", /*"collection", "nominees",*/ "winners",/*"submit","profile","sites"*/];
+const pages = ["index", /*"collection", "nominees","winners",*/"submit","profile"/*,"sites"*/];
 
 const devMode = process.env.NODE_ENV !== 'production';
 module.exports = {
   entry: [
     './src/index.js',
     './src/assets/scss/main.scss',
-    './src/assets/scss/pages/collection.scss',
-    './src/assets/scss/pages/nominees.scss',
-    './src/assets/scss/pages/winners.sass',
-    './src/assets/scss/pages/home.scss',
+    // './src/assets/scss/pages/collection.scss',
+    // './src/assets/scss/pages/nominees.scss',
+    // './src/assets/scss/pages/winners.sass',
+    // './src/assets/scss/pages/home.scss',
+    './src/assets/scss/pages/profile.scss',
+    './src/assets/scss/pages/submit.scss'
+
   ],
   devtool: 'source-map',
   output: {
