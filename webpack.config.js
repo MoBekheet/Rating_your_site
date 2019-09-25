@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const webpack = require("webpack");
 const autoprefixer = require("autoprefixer");
 const CopyPlugin = require('copy-webpack-plugin');
-const pages = ["index", /*"collection", "nominees",*/ "winners",/*"submit","profile","sites"*/];
+const pages = ["index", /*"collection", "nominees", "winners",/*"submit","profile","sites"*/];
 
 const devMode = process.env.NODE_ENV !== 'production';
 module.exports = {
