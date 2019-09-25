@@ -1,0 +1,250 @@
+include assets/includes/_variables
+include assets/includes/_mixins
+include assets/includes/mixins/_card
+
+<!DOCTYPE html>
+html(lang="en")
+  head 
+    //- meta(charset="UTF-8")
+      meta(name="viewport",content="width=device-width, initial-scale=1.0")
+      meta(http-equiv="X-UA-Compatible",content="ie=edge")
+      title Site of the day
+    include assets/includes/_head
+      
+  body
+  
+    a(href="submit.html" id="btnSubmitYourSite_absolute" class="fi flaticon-add p-3 link" data-hover="!أعرض موقعك الأن")
+    include assets/includes/mixins/_navbar&aside
+    include assets/includes/mixins/_login
+    include assets/includes/mixins/_cursor
+    main
+      div(data-scroll)
+      
+        section(id="SitePage")
+          div(class="HomeSection item_scroll")
+            img(   src="../src/assets/images/siteHome.jpg") 
+            div(class="home-info")
+              div(class="container content")
+                h1 تصاميم
+                p تطوير موقع لشركة طبية في تركيا, الموقع متعدد اللغات
+              div(class="RightIcns mt-4")
+                div(class="btns_top2 d-flex justify-content-end")
+                  a(class="d-inline-block px-3 py-2 mx-1" href="#")
+                    i(class="flaticon-app fi")
+                  a(class="d-inline-block px-3 py-2 mx-1" href="#")
+                    i(class="flaticon-like fi mr-2")
+                      span 35
+              
+              div(class="ShareICN")
+                div(class="btns_top2 d-flex justify-content-end")
+                  a(class="d-inline-block link px-3 py-2 mx-1" href="#" data-hover="شارك")
+                    i( class="flaticon-share fi")
+        
+        section(id="Tags-Section")
+          div(class="container")
+            div(class="row")
+              div(class="col-ms-12 m-auto")
+                div(class="content")
+                  p هذل هو الموقع الفائز لهذا اليوم
+                  div(class="tags")
+                    a
+                      span web design
+                    a
+                      span design
+                    a
+                      span web design and development
+                    a 
+                      span technology
+                    a 
+                      span style
+                    a  
+                      span sass
+                    a  
+                      span HTML
+                    a  
+                      span CSS
+                    a  
+                      span bootstrap
+                  
+                  div(class="clr")
+        
+        div(class="hr")
+
+        div(class="bar")
+          ul
+            li  
+              a(class="navScroll" href="#Photos") الصور
+            li 
+              a(class="navScroll" href="#Videos") الفيديوهات
+            li  
+              a(class="navScroll" href="#Comments") التعليقات
+        
+        section(id="Photos")
+          div( class="container")
+            div(class="row")
+              div(class="col-md-12 py-4")
+                <img src="assets/images/image1.jpg">
+              div(class="col-md-12 py-4")
+                <img src="assets/images/image1.jpg">
+        
+        section(id="Videos")
+          div(class="container")
+            div(class="row")
+              div(class="col-lg-6 col-md-12 col-sm-12  px-3")
+                +VideoCard("../src/assets/videos/video2.mp4","assets/images/users/1.jpg",null,"محمود بخيت","30","مصر","3 فبراير 2018")
+              div(class="col-lg-6 col-md-12 col-sm-12  px-3")
+                +VideoCard("../src/assets/videos/video2.mp4","assets/images/users/2.jpg",null,"محمود بخيت","30","مصر","3 فبراير 2018")
+
+
+        section(id="Comments")
+          div(class="container")
+            div(class="row")
+
+              div(class="col-md-12 col-sm-12  col-12 py-2 comment")
+                div( class="row")
+                  div(class="col-md-6 ")
+                    div(class="CommentRate")
+                    //- lsa hna na2s el progress bar !!
+                  div(class="col-md-6 col-sm-12 col-12")
+                    div(class="CommentData")
+                      div(class="container py-2 ")
+                        div(class="row")
+                          div(class="col-md-10 col-sm-9 col-8 Data")
+                            h3 احمد علي
+                            h5 هنا سوف يكتب التعليق الخاص ب احمد علي
+                          div(class="col-md-2 col-sm-3 col-4 IMG ")
+                            img(class="img-fluid " src="assets/images/image4.jpg")
+              div(class="col-md-12 col-sm-12  col-12 py-2 comment")
+                div( class="row")
+                  div(class="col-md-6 ")
+                    div(class="CommentRate")
+                    //- lsa hna na2s el progress bar !!
+                  div(class="col-md-6 col-sm-12 col-12")
+                    div(class="CommentData")
+                      div(class="container py-2 ")
+                        div(class="row")
+                          div(class="col-md-10 col-sm-9 col-8 Data")
+                            h3 احمد علي
+                            h5 هنا سوف يكتب التعليق الخاص ب احمد علي
+                          div(class="col-md-2 col-sm-3 col-4 IMG ")
+                            img(class="img-fluid " src="assets/images/image4.jpg")
+
+              div(class="col-md-12 col-sm-12  col-12 py-2 comment")
+                div( class="row")
+                  div(class="col-md-6 ")
+                    div(class="CommentRate")
+                    //- lsa hna na2s el progress bar !!
+                  div(class="col-md-6 col-sm-12 col-12")
+                    div(class="CommentData")
+                      div(class="container py-2 ")
+                        div(class="row")
+                          div(class="col-md-10 col-sm-9 col-8 Data")
+                            h3 احمد علي
+                            h5 هنا سوف يكتب التعليق الخاص ب احمد علي
+                          div(class="col-md-2 col-sm-3 col-4 IMG ")
+                            img(class="img-fluid " src="assets/images/image4.jpg")
+              div(class="col-md-12 col-sm-12  col-12 py-2 comment")
+                div( class="row")
+                  div(class="col-md-6 ")
+                    div(class="CommentRate")
+                    //- lsa hna na2s el progress bar !!
+                  div(class="col-md-6 col-sm-12 col-12")
+                    div(class="CommentData")
+                      div(class="container py-2 ")
+                        div(class="row")
+                          div(class="col-md-10 col-sm-9 col-8 Data")
+                            h3 احمد علي
+                            h5 هنا سوف يكتب التعليق الخاص ب احمد علي
+                          div(class="col-md-2 col-sm-3 col-4 IMG ")
+                            img(class="img-fluid " src="assets/images/image4.jpg")
+
+              div(class="col-md-12 col-sm-12  col-12 py-2 comment")
+                div( class="row")
+                  div(class="col-md-6 ")
+                    div(class="CommentRate")
+                    //- lsa hna na2s el progress bar !!
+                  div(class="col-md-6 col-sm-12 col-12")
+                    div(class="CommentData")
+                      div(class="container py-2 ")
+                        div(class="row")
+                          div(class="col-md-10 col-sm-9 col-8 Data")
+                            h3 احمد علي
+                            h5 هنا سوف يكتب التعليق الخاص ب احمد علي
+                          div(class="col-md-2 col-sm-3 col-4 IMG ")
+                            img(class="img-fluid " src="assets/images/image4.jpg")
+              div(class="col-md-12 col-sm-12  col-12 py-2 comment")
+                div( class="row")
+                  div(class="col-md-6 ")
+                    div(class="CommentRate")
+                    //- lsa hna na2s el progress bar !!
+                  div(class="col-md-6 col-sm-12 col-12")
+                    div(class="CommentData")
+                      div(class="container py-2 ")
+                        div(class="row")
+                          div(class="col-md-10 col-sm-9 col-8 Data")
+                            h3 احمد علي
+                            h5 هنا سوف يكتب التعليق الخاص ب احمد علي
+                          div(class="col-md-2 col-sm-3 col-4 IMG ")
+                            img(class="img-fluid " src="assets/images/image4.jpg")
+
+              div(class="col-md-12 col-sm-12  col-12 py-2 comment")
+                div( class="row")
+                  div(class="col-md-6 ")
+                    div(class="CommentRate")
+                    //- lsa hna na2s el progress bar !!
+                  div(class="col-md-6 col-sm-12 col-12")
+                    div(class="CommentData")
+                      div(class="container py-2 ")
+                        div(class="row")
+                          div(class="col-md-10 col-sm-9 col-8 Data")
+                            h3 احمد علي
+                            h5 هنا سوف يكتب التعليق الخاص ب احمد علي
+                          div(class="col-md-2 col-sm-3 col-4 IMG ")
+                            img(class="img-fluid " src="assets/images/image4.jpg")
+              div(class="col-md-12 col-sm-12  col-12 py-2 comment")
+                div( class="row")
+                  div(class="col-md-6 ")
+                    div(class="CommentRate")
+                    //- lsa hna na2s el progress bar !!
+                  div(class="col-md-6 col-sm-12 col-12")
+                    div(class="CommentData")
+                      div(class="container py-2 ")
+                        div(class="row")
+                          div(class="col-md-10 col-sm-9 col-8 Data")
+                            h3 احمد علي
+                            h5 هنا سوف يكتب التعليق الخاص ب احمد علي
+                          div(class="col-md-2 col-sm-3 col-4 IMG ")
+                            img(class="img-fluid " src="assets/images/image4.jpg")
+
+              div(class="col-md-12 col-sm-12  col-12 py-2 comment")
+                div( class="row")
+                  div(class="col-md-6 ")
+                    div(class="CommentRate")
+                    //- lsa hna na2s el progress bar !!
+                  div(class="col-md-6 col-sm-12 col-12")
+                    div(class="CommentData")
+                      div(class="container py-2 ")
+                        div(class="row")
+                          div(class="col-md-10 col-sm-9 col-8 Data")
+                            h3 احمد علي
+                            h5 هنا سوف يكتب التعليق الخاص ب احمد علي
+                          div(class="col-md-2 col-sm-3 col-4 IMG ")
+                            img(class="img-fluid " src="assets/images/image4.jpg")
+              div(class="col-md-12 col-sm-12  col-12 py-2 comment")
+                div( class="row")
+                  div(class="col-md-6 ")
+                    div(class="CommentRate")
+                    //- lsa hna na2s el progress bar !!
+                  div(class="col-md-6 col-sm-12 col-12")
+                    div(class="CommentData")
+                      div(class="container py-2 ")
+                        div(class="row")
+                          div(class="col-md-10 col-sm-9 col-8 Data")
+                            h3 احمد علي
+                            h5 هنا سوف يكتب التعليق الخاص ب احمد علي
+                          div(class="col-md-2 col-sm-3 col-4 IMG ")
+                            img(class="img-fluid " src="assets/images/image4.jpg")
+
+        
+        include assets/includes/mixins/_footer
+    include assets/includes/_scripts

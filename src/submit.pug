@@ -1,0 +1,114 @@
+include assets/includes/_variables
+include assets/includes/_mixins
+include assets/includes/mixins/_card
+doctype html
+html(lang="en")
+  //- HEAD
+  head
+    include assets/includes/_head
+    //- link(rel="stylesheet", href="assets/css/home.css")
+    
+  body
+    .loading.d-none.align-items-center.justify-content-center
+      .sk-folding-cube
+        .sk-cube1.sk-cube
+        .sk-cube2.sk-cube
+        .sk-cube4.sk-cube
+        .sk-cube3.sk-cube
+    a(href="submit.html" id="btnSubmitYourSite_absolute" class="fi flaticon-add p-3 link" data-hover="!أعرض موقعك الأن")
+    include assets/includes/mixins/_navbar&aside
+    include assets/includes/mixins/_login
+    include assets/includes/mixins/_cursor
+    
+    main
+      div
+        section#submit
+          .container
+            h2.sub-t خطوات رفع الموقع
+            .d-flex.justify-content-center.align-items-center
+              .sub-step.d-flex
+                .line
+                  .f-sub
+                  h6  يجب كتابة المعلومات كاملة 
+                .s-sub.mr-2
+            .form-group
+              .inputs.my-4
+                .row
+                  .col-sm-2
+                    label.my-3.sub-label اسم الموقع:
+                  .col-sm-10
+                    input.form-control(type='text', name='', id='', placeholder='', aria-describedby='helpId')
+              .inputs.my-4
+                .row
+                  .col-sm-2
+                    label.my-2.sub-label الرابط:
+                  .col-sm-10
+                    input.form-control(type='text', name='', id='', placeholder='', aria-describedby='helpId')
+              .inputs.my-4
+                .row
+                  .col-sm-2
+                    label.my-2.sub-label الوصف:
+                  .col-sm-10
+                    input.form-control(type='text', name='', id='', placeholder='', aria-describedby='helpId')
+              .inputs.my-4
+                .row
+                  .col-sm-2
+                    label.my-2.sub-label الأقسام:
+                  .col-sm-10
+                    input.form-control(type='text', name='', id='', placeholder='', aria-describedby='helpId')
+              .inputs.my-4
+                .row
+                  .col-sm-2
+                    label.my-2.sub-label الإشارات:
+                  .col-sm-10
+                    input.form-control(type='text', name='', id='', placeholder='', aria-describedby='helpId')
+              .inputs.my-4
+                .row
+                  .col-sm-2
+                    label.my-2.sub-label التقنيات:
+                  .col-sm-10
+                    input.form-control(type='text', name='', id='', placeholder='', aria-describedby='helpId')
+            .form-group
+              .inputs.my-4
+                .row
+                  .col-sm-2
+                    label.my-2.sub-label مُصمم بواسطة:
+                  .col-sm-10
+                    input.form-control(type='text', name='', id='', placeholder='اسم المستخدم', aria-describedby='helpId')
+              .inputs.my-4
+                .row
+                  .col-sm-2
+                    label.my-2.sub-label رابط المصمم:
+                  .col-sm-10
+                    input.form-control(type='text', name='', id='', placeholder='رابط المصمم', aria-describedby='helpId')
+              .inputs.my-4
+                .row
+                  .col-sm-2
+                    label.my-2.sub-label تويتر:
+                  .col-sm-10
+                    input.form-control(type='text', name='', id='', placeholder='', aria-describedby='helpId')
+              .inputs.my-4
+                .row
+                  .col-sm-2
+                    label.my-2.sub-label البلد:
+                  .col-sm-10
+                    select#inlineFormCustomSelect.form-control
+                      option(selected='') مصر
+                      option(value='1') تونس
+                      option(value='2') الجزائر
+                      option(value='3') المغرب
+                      option(value='3') سوريا
+                      option(value='3') العراق
+                      option(value='3') اليمن
+            .form-group
+              .inputs.my-4
+                .row
+                  .col-sm-2
+                    label.my-2.sub-label المتعاونين:
+                  .col-sm-10
+                    input.form-control(type='text', name='', id='', placeholder='', aria-describedby='helpId')
+            input.form-control.m-auto.mb-4.btn(type='submit', value='أرفع الآن', style='width:60% ; background:#00a8be;color:#fff;margin-bottom:40px!important;font-weight:bold')
+        include assets/includes/mixins/_footer
+          
+    //- SCRIPTS
+    include assets/includes/_scripts

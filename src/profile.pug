@@ -1,0 +1,352 @@
+include assets/includes/_variables
+include assets/includes/_mixins
+include assets/includes/mixins/_card
+doctype html
+html(lang="en")
+  //- HEAD
+  head
+    include assets/includes/_head
+    //- link(rel="stylesheet", href="assets/css/home.css")
+    
+  body
+    .loading.d-none.align-items-center.justify-content-center
+      .sk-folding-cube
+        .sk-cube1.sk-cube
+        .sk-cube2.sk-cube
+        .sk-cube4.sk-cube
+        .sk-cube3.sk-cube
+    a(href="submit.html" id="btnSubmitYourSite_absolute" class="fi flaticon-add p-3 link" data-hover="!أعرض موقعك الأن")
+    include assets/includes/mixins/_navbar&aside
+    include assets/includes/mixins/_login
+    include assets/includes/mixins/_cursor
+    
+    main
+      div
+        section#profile
+          .container
+            .row
+              .col-md-12
+                .profile-info.d-flex.align-items-center.justify-content-center
+                  .background-profile
+                  .header__wrap
+                    #profile__img
+                      img(src='assets/images/profile/1.jpg', alt='')
+                      span#friend.add__icon.fa.fa-user-plus
+                    span
+                      h2.profile-name أمــل حســام
+                      p.segoe Cairo , Egypt
+                      ul.profile__stat.d-flex.align-items-center.justify-content-center
+                        li#view
+                          i.fa.fa-eye
+                          p 1067
+                        li#like
+                          i.fa.fa-heart
+                          p 105
+                        li#friend
+                          i.fa.fa-user-plus
+                          p 47
+                    .buttons.d-flex.justify-content-center.align-items-center
+                      button#award المواقع الفائزة
+        section#gird.my-profile
+          .container
+            .card-columns
+              .card.item_scroll.mb-5
+                .mask_img.item__img-wrap.link
+                  img.item__img(src='assets/images/2.jpg', alt='')
+                  .caption.d-flex.align-items-center.px-3
+                    .avatar
+                      img(src='assets/images/users/1.jpg', alt='')
+                    .box.mr-2
+                      h4.m-0.name أحمد عمر 
+                      p.m-0.projects
+                        span 30
+                        span.mx-1 مشروع 
+                      h5.m-0.form مصر
+                  .overlay.p-3
+                    .btns_top.d-flex.justify-content-end
+                      a.d-inline-block.link.px-3.py-1.mx-1(href='#', data-hover='أضافه في مجموعتي')
+                        i.flaticon-app.fi
+                      a.d-inline-block.link.px-3.py-1.mx-1(href='#', data-hover='أعجبني')
+                        i.flaticon-like.fi.mr-2
+                        span 35
+                .caption_down
+                  h4.title.my-1
+                    a(href='#') وردبربس لشركة طبيبة
+                  .data-tags.d-flex.justify-content-between.align-items-center
+                    h5.data-c.my-0 July 15, 2018 
+                    .web-tags.d-flex.align-items-center
+                      ul
+                        li
+                          i.dislink.flaticon-medal.fi.mx-2(data-hover='فائز اليوم')
+                        li
+                          i.dislink.flaticon-coding.fi.mx-2(data-hover='موقع مطور')
+              .card.item_scroll.mb-5
+                .mask_img.item__img-wrap.link
+                  img.item__img(src='assets/images/8.jpg', alt='')
+                  .caption.d-flex.align-items-center.px-3
+                    .avatar
+                      img(src='assets/images/users/1.jpg', alt='')
+                    .box.mr-2
+                      h4.m-0.name محمود بخيت
+                      p.m-0.projects
+                        span 30
+                        span.mx-1 مشروع 
+                      h5.m-0.form مصر
+                  .overlay.p-3
+                    .btns_top.d-flex.justify-content-end
+                      a.d-inline-block.link.px-3.py-1.mx-1(href='#', data-hover='أضافه في مجموعتي')
+                        i.flaticon-app.fi
+                      a.d-inline-block.link.px-3.py-1.mx-1(href='#', data-hover='أعجبني')
+                        i.flaticon-like.fi.mr-2
+                        span 35
+                .caption_down
+                  h4.title.my-1
+                    a(href='#') وردبربس لشركة طبيبة
+                  .data-tags.d-flex.justify-content-between.align-items-center
+                    h5.data-c.my-0 August 8, 2016 
+                    .web-tags.d-flex.align-items-center
+                      ul
+                        li
+                          i.dislink.flaticon-medal.fi.mx-2(data-hover='فائز اليوم')
+              .card.item_scroll.mb-5
+                .mask_img.item__img-wrap.link
+                  img.item__img(src='assets/images/profile/3.jpg', alt='')
+                  .caption.d-flex.align-items-center.px-3
+                    .avatar
+                      img(src='assets/images/users/1.jpg', alt='')
+                    .box.mr-2
+                      h4.m-0.name محمود بخيت
+                      p.m-0.projects
+                        span 30
+                        span.mx-1 مشروع 
+                      h5.m-0.form مصر
+                  .overlay.p-3
+                    .btns_top.d-flex.justify-content-end
+                      a.d-inline-block.link.px-3.py-1.mx-1(href='#', data-hover='أضافه في مجموعتي')
+                        i.flaticon-app.fi
+                      a.d-inline-block.link.px-3.py-1.mx-1(href='#', data-hover='أعجبني')
+                        i.flaticon-like.fi.mr-2
+                        span 35
+                .caption_down
+                  h4.title.my-1
+                    a(href='#') وردبربس لشركة طبيبة
+                  .data-tags.d-flex.justify-content-between.align-items-center
+                    h5.data-c.my-0 March 9, 2017 
+                    .web-tags.d-flex.align-items-center
+                      ul
+                        li
+                          i.dislink.flaticon-coding1.fi.mx-2(data-hover='موبايل الأسبوع')
+                        li
+                          i.dislink.flaticon-coding.fi.mx-2(data-hover='موقع مطور')
+              .card.item_scroll.mb-5
+                .mask_img.item__img-wrap.link
+                  img.item__img(src='assets/images/profile/2.jpg', alt='')
+                  .caption.d-flex.align-items-center.px-3
+                    .avatar
+                      img(src='assets/images/users/1.jpg', alt='')
+                    .box.mr-2
+                      h4.m-0.name محمود بخيت
+                      p.m-0.projects
+                        span 30
+                        span.mx-1 مشروع 
+                      h5.m-0.form مصر
+                  .overlay.p-3
+                    .btns_top.d-flex.justify-content-end
+                      a.d-inline-block.link.px-3.py-1.mx-1(href='#', data-hover='أضافه في مجموعتي')
+                        i.flaticon-app.fi
+                      a.d-inline-block.link.px-3.py-1.mx-1(href='#', data-hover='أعجبني')
+                        i.flaticon-like.fi.mr-2
+                        span 35
+                .caption_down
+                  h4.title.my-1
+                    a(href='#') وردبربس لشركة طبيبة
+                  .data-tags.d-flex.justify-content-between.align-items-center
+                    h5.data-c.my-0 April 20, 2017 
+                    .web-tags.d-flex.align-items-center
+                      ul
+                        li
+                          i.dislink.flaticon-coding1.fi.mx-2(data-hover='موبايل الأسبوع')
+                        li
+                          i.dislink.flaticon-coding.fi.mx-2(data-hover='موقع مطور')
+              .card.item_scroll.mb-5
+                .mask_img.item__img-wrap.link
+                  img.item__img(src='assets/images/profile/2.jpg', alt='')
+                  .caption.d-flex.align-items-center.px-3
+                    .avatar
+                      img(src='assets/images/users/1.jpg', alt='')
+                    .box.mr-2
+                      h4.m-0.name محمود بخيت
+                      p.m-0.projects
+                        span 30
+                        span.mx-1 مشروع 
+                      h5.m-0.form مصر
+                  .overlay.p-3
+                    .btns_top.d-flex.justify-content-end
+                      a.d-inline-block.link.px-3.py-1.mx-1(href='#', data-hover='أضافه في مجموعتي')
+                        i.flaticon-app.fi
+                      a.d-inline-block.link.px-3.py-1.mx-1(href='#', data-hover='أعجبني')
+                        i.flaticon-like.fi.mr-2
+                        span 35
+                .caption_down
+                  h4.title.my-1
+                    a(href='#') وردبربس لشركة طبيبة
+                  .data-tags.d-flex.justify-content-between.align-items-center
+                    h5.data-c.my-0 December 28, 2016 
+                    .web-tags.d-flex.align-items-center
+                      ul
+                        li
+                          i.dislink.flaticon-medal.fi.mx-2(data-hover='فائز اليوم')
+                        li
+                          i.dislink.flaticon-honor-band-mention.fi.mx-2(data-hover='شرفية')
+              .card.item_scroll.mb-5
+                .mask_img.item__img-wrap.link
+                  img.item__img(src='assets/images/profile/4.jpg', alt='')
+                  .caption.d-flex.align-items-center.px-3
+                    .avatar
+                      img(src='assets/images/users/1.jpg', alt='')
+                    .box.mr-2
+                      h4.m-0.name محمود بخيت
+                      p.m-0.projects
+                        span 30
+                        span.mx-1 مشروع 
+                      h5.m-0.form مصر
+                  .overlay.p-3
+                    .btns_top.d-flex.justify-content-end
+                      a.d-inline-block.link.px-3.py-1.mx-1(href='#', data-hover='أضافه في مجموعتي')
+                        i.flaticon-app.fi
+                      a.d-inline-block.link.px-3.py-1.mx-1(href='#', data-hover='أعجبني')
+                        i.flaticon-like.fi.mr-2
+                        span 35
+                .caption_down
+                  h4.title.my-1
+                    a(href='#') وردبربس لشركة طبيبة
+                  .data-tags.d-flex.justify-content-between.align-items-center
+                    h5.data-c.my-0 May 4, 2015 
+                    .web-tags.d-flex.align-items-center
+                      ul
+                        li
+                          i.dislink.flaticon-honor-band-mention.fi.mx-2(data-hover='شرفية')
+                        li
+                          i.dislink.flaticon-coding.fi.mx-2(data-hover='موقع مطور')
+              .card.item_scroll.mb-5
+                .mask_img.item__img-wrap.link
+                  img.item__img(src='assets/images/profile/6.jpg', alt='')
+                  .caption.d-flex.align-items-center.px-3
+                    .avatar
+                      img(src='assets/images/users/1.jpg', alt='')
+                    .box.mr-2
+                      h4.m-0.name محمود بخيت
+                      p.m-0.projects
+                        span 30
+                        span.mx-1 مشروع 
+                      h5.m-0.form مصر
+                  .overlay.p-3
+                    .btns_top.d-flex.justify-content-end
+                      a.d-inline-block.link.px-3.py-1.mx-1(href='#', data-hover='أضافه في مجموعتي')
+                        i.flaticon-app.fi
+                      a.d-inline-block.link.px-3.py-1.mx-1(href='#', data-hover='أعجبني')
+                        i.flaticon-like.fi.mr-2
+                        span 35
+                .caption_down
+                  h4.title.my-1
+                    a(href='#') وردبربس لشركة طبيبة
+                  .data-tags.d-flex.justify-content-between.align-items-center
+                    h5.data-c.my-0 Februray 17, 2019 
+                    .web-tags.d-flex.align-items-center
+                      ul
+                        li
+                          i.dislink.flaticon-medal.fi.mx-2(data-hover='فائز اليوم')
+                        li
+                          i.dislink.flaticon-coding.fi.mx-2(data-hover='موقع مطور')
+              .card.item_scroll.mb-5
+                .mask_img.item__img-wrap.link
+                  img.item__img(src='assets/images/profile/6.jpg', alt='')
+                  .caption.d-flex.align-items-center.px-3
+                    .avatar
+                      img(src='assets/images/users/1.jpg', alt='')
+                    .box.mr-2
+                      h4.m-0.name محمود بخيت
+                      p.m-0.projects
+                        span 30
+                        span.mx-1 مشروع 
+                      h5.m-0.form مصر
+                  .overlay.p-3
+                    .btns_top.d-flex.justify-content-end
+                      a.d-inline-block.link.px-3.py-1.mx-1(href='#', data-hover='أضافه في مجموعتي')
+                        i.flaticon-app.fi
+                      a.d-inline-block.link.px-3.py-1.mx-1(href='#', data-hover='أعجبني')
+                        i.flaticon-like.fi.mr-2
+                        span 35
+                .caption_down
+                  h4.title.my-1
+                    a(href='#') وردبربس لشركة طبيبة
+                  .data-tags.d-flex.justify-content-between.align-items-center
+                    h5.data-c.my-0 January 13, 2013 
+                    .web-tags.d-flex.align-items-center
+                      ul
+                        li
+                          i.dislink.flaticon-coding.fi.mx-2(data-hover='موقع مطور')
+              .card.item_scroll.mb-5
+                .mask_img.item__img-wrap.link
+                  img.item__img(src='assets/images/10.jpg', alt='')
+                  .caption.d-flex.align-items-center.px-3
+                    .avatar
+                      img(src='assets/images/vv.jpg', alt='')
+                    .box.mr-2
+                      h4.m-0.name محمود بخيت
+                      p.m-0.projects
+                        span 30
+                        span.mx-1 مشروع 
+                      h5.m-0.form مصر
+                  .overlay.p-3
+                    .btns_top.d-flex.justify-content-end
+                      a.d-inline-block.link.px-3.py-1.mx-1(href='#', data-hover='أضافه في مجموعتي')
+                        i.flaticon-app.fi
+                      a.d-inline-block.link.px-3.py-1.mx-1(href='#', data-hover='أعجبني')
+                        i.flaticon-like.fi.mr-2
+                        span 35
+                .caption_down
+                  h4.title.my-1
+                    a(href='#') وردبربس لشركة طبيبة
+                  .data-tags.d-flex.justify-content-between.align-items-center
+                    h5.data-c.my-0 October 26, 2017 
+                    .web-tags.d-flex.align-items-center
+                      ul
+                        li
+                          i.dislink.flaticon-medal.fi.mx-2(data-hover='فائز اليوم')
+                        li
+                          i.dislink.flaticon-coding1.fi.mx-2(data-hover='موبايل الأسبوع')
+              .card.item_scroll.mb-5
+                .mask_img.item__img-wrap.link
+                  img.item__img(src='assets/images/12.jpg', alt='')
+                  .caption.d-flex.align-items-center.px-3
+                    .avatar
+                      img(src='assets/images/users/1.jpg', alt='')
+                    .box.mr-2
+                      h4.m-0.name محمود بخيت
+                      p.m-0.projects
+                        span 30
+                        span.mx-1 مشروع 
+                      h5.m-0.form مصر
+                  .overlay.p-3
+                    .btns_top.d-flex.justify-content-end
+                      a.d-inline-block.link.px-3.py-1.mx-1(href='#', data-hover='أضافه في مجموعتي')
+                        i.flaticon-app.fi
+                      a.d-inline-block.link.px-3.py-1.mx-1(href='#', data-hover='أعجبني')
+                        i.flaticon-like.fi.mr-2
+                        span 35
+                .caption_down
+                  h4.title.my-1
+                    a(href='#') وردبربس لشركة طبيبة
+                  .data-tags.d-flex.justify-content-between.align-items-center
+                    h5.data-c.my-0 August 13, 2018 
+                    .web-tags.d-flex.align-items-center
+                      ul
+                        li
+                          i.dislink.flaticon-medal.fi.mx-2(data-hover='فائز اليوم')
+                        li
+                          i.dislink.flaticon-coding1.fi.mx-2(data-hover='موبايل الأسبوع')
+        include assets/includes/mixins/_footer
+          
+    //- SCRIPTS
+    include assets/includes/_scripts

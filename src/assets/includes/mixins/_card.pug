@@ -193,3 +193,39 @@ mixin proCardWinners(src, alt, srcAvatar, altAvatar, name,projects,form)
     .caption_down
       h4.title.my-1 وردبربس لشركة طبيبة
       p.para.mt-2.mb-0 تطوير موقع باستخدام الوردبريس لشركة طبية في تركيا، الموقع متعدد اللغات
+
+
+mixin VideoCard(src,srcAvatar, altAvatar, name,projects,form,date)
+  .card.item.item_scroll.swiper-slide
+    .item__img-wrap.link
+      video(src=src)
+      .caption.d-flex.align-items-center.p-md-3.p-2
+        a(href="profile.html").avatar
+          img(src=srcAvatar, alt=altAvatar)
+        .box.mr-2
+          h4(class="m-0 name")=name
+          p(class="m-0 projects")
+            span=projects
+            span.mx-1 مشروع   
+          h5(class="m-0 form")=form
+      .overlay.p-3
+        .btns_top.d-flex.justify-content-end
+          a(href="#" class="d-inline-block link px-3 py-2 mx-1" data-hover="أضافه في مجموعتي"): i.flaticon-app.fi
+          a(href="#" class="d-inline-block link px-3 py-2 mx-1" data-hover="أعجبني")
+            i.flaticon-like.fi.mr-2
+            span 35
+          a(href="#" class="d-inline-block link px-3 py-2 mx-1" data-hover="شارك"): i.flaticon-share.fi
+
+    .caption_down
+      .row.no-gutters
+        .col-6
+          h4.title.my-md-3.my-1 وردبربس لشركة طبيبة
+          h5.date.my-2.my-md-3=date
+        .col-6
+          ul.my-md-2.my-1.p-0.d-flex.justify-content-end.flex-wrap
+            li.mx-md-2.m-2: i(data-hover="شرفية").dislink.flaticon-honor-band-mention.fi
+            li.mx-md-2.m-2: i(data-hover="فائز اليوم").dislink.flaticon-medal.fi
+            li.mx-md-2.m-2: i(data-hover="موبايل الأسبوع").dislink.flaticon-coding1.fi
+            li.mx-md-2.m-2: i(data-hover="موقع مطور").dislink.flaticon-coding.fi
+
+
