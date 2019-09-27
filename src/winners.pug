@@ -1,0 +1,40 @@
+include assets/includes/_variables
+include assets/includes/_mixins
+include assets/includes/mixins/_card
+doctype html
+html(lang="en")
+  //- HEAD
+  head
+    include assets/includes/_head
+  body
+    .loading.d-flex.align-items-center.justify-content-center
+      .sk-folding-cube
+        div(class="sk-cube1 sk-cube")
+        div(class="sk-cube2 sk-cube")
+        div(class="sk-cube4 sk-cube")
+        div(class="sk-cube3 sk-cube")
+    a(href="submit.html" id="btnSubmitYourSite_absolute" class="fi flaticon-add p-3 link" data-hover="!أعرض موقعك الأن")
+    include assets/includes/mixins/_navbar&aside
+    include assets/includes/mixins/_login
+    include assets/includes/mixins/_cursor
+    
+    main
+      div(data-scroll)
+        include assets/includes/mixins/_filters
+        section#gird.my-5.py-5
+          .container
+            div(class="card-columns") 
+              +cardWinners("assets/images/12.jpg",null,"assets/images/users/5.jpg",null,"محمود بخيت","30","مصر","3 فبراير 2018")
+              +cardWinners("assets/images/13.jpg",null,"assets/images/users/2.jpg",null,"محمود بخيت","30","مصر","3 فبراير 2018")
+              +cardWinners("assets/images/2.jpg",null,"assets/images/users/3.jpg",null,"محمود بخيت","30","مصر","3 فبراير 2018")
+              +cardWinners("assets/images/3.jpg",null,"assets/images/users/5.jpg",null,"محمود بخيت","30","مصر","3 فبراير 2018")
+              +cardWinners("assets/images/4.jpg",null,"assets/images/users/2.jpg",null,"محمود بخيت","30","مصر","3 فبراير 2018")
+              +cardWinners("assets/images/7.jpg",null,"assets/images/users/1.jpg",null,"محمود بخيت","30","مصر","3 فبراير 2018")
+              +cardWinners("assets/images/9.jpg",null,"assets/images/users/2.jpg",null,"محمود بخيت","30","مصر","3 فبراير 2018")
+              +cardWinners("assets/images/11.jpg",null,"assets/images/users/5.jpg",null,"محمود بخيت","30","مصر","3 فبراير 2018")
+              +cardWinners("assets/images/10.jpg",null,"assets/images/users/3.jpg",null,"محمود بخيت","30","مصر","3 فبراير 2018")
+              +cardWinners("assets/images/8.jpg",null,"assets/images/users/4.jpg",null,"محمود بخيت","30","مصر","3 فبراير 2018")
+
+        include assets/includes/mixins/_footer
+    //- SCRIPTS
+    include assets/includes/_scripts
