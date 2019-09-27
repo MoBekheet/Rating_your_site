@@ -1,7 +1,6 @@
 import { Circle } from "progressbar.js";
 import { Draggable } from "gsap/Draggable";
 import imagesloaded from "imagesloaded";
-{
   let isMobile = false;
   // device detection
   if (/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|ipad|iris|kindle|Android|Silk|lge |maemo|midp|mmp|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i.test(navigator.userAgent)
@@ -296,7 +295,7 @@ import imagesloaded from "imagesloaded";
     }
   }
 
-  class progressBar {
+  export class progressBar {
     constructor(el, from, to, { animate: animate }) {
       let name = new Circle(el, {
         color: '#aaa',
@@ -328,25 +327,7 @@ import imagesloaded from "imagesloaded";
 
     }
   }
-  if (typeof (noteSite[0]) != 'undefined' && noteSite[0] != null) {
 
-
-  let design = new progressBar(noteSite[0], '#555', '#dc3545', {
-    animate: 0.9
-  });
-  let usability = new progressBar(noteSite[1], '#555', '#fd7e14', {
-    animate: 0.6
-  });
-  let creativity = new progressBar(noteSite[2], '#555', '#17a2b8', {
-    animate: 0.7
-  });
-  let content = new progressBar(noteSite[3], '#555', '#20c997', {
-    animate: 0.90
-  });
-  let responsive = new progressBar(noteSite[4], '#555', '#28a745', {
-    animate: 0.80
-  });
-}
 
   class DraggableSlider {
 
@@ -450,4 +431,3 @@ import imagesloaded from "imagesloaded";
       new Slide();
     }
   });
-}
