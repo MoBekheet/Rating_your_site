@@ -12,6 +12,12 @@ html(lang="en")
     include assets/includes/_head
       
   body
+    .loading.d-flex.align-items-center.justify-content-center
+      .sk-folding-cube
+        .sk-cube1.sk-cube
+        .sk-cube2.sk-cube
+        .sk-cube4.sk-cube
+        .sk-cube3.sk-cube
   
     a(href="submit.html" id="btnSubmitYourSite_absolute" class="fi flaticon-add p-3 link" data-hover="!أعرض موقعك الأن")
     include assets/includes/mixins/_navbar&aside
@@ -71,7 +77,7 @@ html(lang="en")
         div(class="hr")
 
         div(class="bar")
-          ul
+          ul(class="st-line")
             li  
               a(class="navScroll" href="#Photos") الصور
             li 

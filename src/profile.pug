@@ -9,7 +9,7 @@ html(lang="en")
     //- link(rel="stylesheet", href="assets/css/home.css")
     
   body
-    .loading.d-none.align-items-center.justify-content-center
+    .loading.d-flex.align-items-center.justify-content-center
       .sk-folding-cube
         .sk-cube1.sk-cube
         .sk-cube2.sk-cube
@@ -21,7 +21,7 @@ html(lang="en")
     include assets/includes/mixins/_cursor
     
     main
-      div
+      div(data-scroll)
         section#profile
           .container
             .row
