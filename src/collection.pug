@@ -1,0 +1,53 @@
+
+include assets/includes/_variables
+include assets/includes/_mixins
+include assets/includes/mixins/_card
+doctype html
+html(lang="en")
+  //- HEAD
+  head
+    include assets/includes/_head
+    //- link(rel="stylesheet", href="assets/css/collection.min.css")
+  body
+    .loading.d-flex.align-items-center.justify-content-center
+      .sk-folding-cube
+        div(class="sk-cube1 sk-cube")
+        div(class="sk-cube2 sk-cube")
+        div(class="sk-cube4 sk-cube")
+        div(class="sk-cube3 sk-cube")
+    a(href="submit.html" id="btnSubmitYourSite_absolute" class="fi flaticon-add p-3 link" data-hover="!أعرض موقعك الأن")
+    include assets/includes/mixins/_navbar&aside
+    include assets/includes/mixins/_login
+    include assets/includes/mixins/_cursor
+    main
+      div(data-scroll)
+        include assets/includes/mixins/_filters
+        section#gird
+          .container
+            div(class="card-columns") 
+              +cardCollection("assets/images/1.jpg","","assets/images/users/5.jpg","","محمود بخيت","مصر","3 فبراير 2018")
+              +cardCollection("assets/images/1.jpg","","assets/images/users/1.jpg","","محمود بخيت","مصر","3 فبراير 2018")
+              +cardCollection("assets/images/12.jpg","","assets/images/users/2.jpg","","محمود بخيت","مصر","3 فبراير 2018")
+              +cardCollection("assets/images/13.jpg","","assets/images/users/3.jpg","","محمود بخيت","مصر","3 فبراير 2018")
+              +cardCollection("assets/images/3.jpg","","assets/images/users/4.jpg","","محمود بخيت","مصر","3 فبراير 2018")
+              +cardCollection("assets/images/11.jpg","","assets/images/users/5.jpg","","محمود بخيت","مصر","3 فبراير 2018")
+              +cardCollection("assets/images/5.jpg","","assets/images/users/4.jpg","","محمود بخيت","مصر","3 فبراير 2018")
+              +cardCollection("assets/images/7.jpg","","assets/images/users/3.jpg","","محمود بخيت","مصر","3 فبراير 2018")
+              +cardCollection("assets/images/1.jpg","","assets/images/users/2.jpg","","محمود بخيت","مصر","3 فبراير 2018")
+              +cardCollection("assets/images/3.jpg","","assets/images/users/1.jpg","","محمود بخيت","مصر","3 فبراير 2018")
+              
+        section.pagination.py-5
+          .container
+            .row
+              .col-md-12
+                ul.d-flex
+                  li.px-1: a.p-2.link(href="#") 1
+                  li.px-1: a.p-2.link(href="#") 2
+                  li.px-1: a.p-2.link(href="#") 3
+                  li.px-1: a.p-2.link(href="#") 4
+
+        include assets/includes/mixins/_footer
+
+
+    //- SCRIPTS
+    include assets/includes/_scripts
